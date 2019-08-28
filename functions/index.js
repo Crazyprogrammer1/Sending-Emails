@@ -1,8 +1,7 @@
 const functions = require('firebase-functions');
 const cors = require('cors')({origin: true});
 const mailgun = require("mailgun-js");
-const DOMAIN = 'www.stylemirror.in';
-const api_key = 'key-e587290afb3907443663f648060b4b86';
+
 const mg = mailgun({apiKey: api_key, domain: DOMAIN});
 
 exports.contactUs = functions.https.onRequest((req,res) => {
