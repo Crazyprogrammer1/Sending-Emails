@@ -1,0 +1,24 @@
+button.contact1-form-btn:disabled {
+  background: #dae4d9;
+  color: black;
+}
+
+.recieve-copy {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.successfully-sent {
+    text-align: center;
+    margin: 1em 0;
+    .msg {
+      color: green;
+      font-size: 1em;
+    }
+    .try-again {
+      color: #007bff;
+      text-decoration: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+}
