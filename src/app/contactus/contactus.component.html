@@ -15,21 +15,14 @@
 			</div>
 
 			<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-				<input formControlName="email" #em class="input1" type="text" name="email" placeholder="Email">
+				<input formControlName="email" class="input1" type="text" name="email" placeholder="Email">
 				<span class="shadow-input1"></span>
 			</div>
-			<div class="alert alert-danger" role="alert" *ngIf="formControls.email.errors?.email && (formControls.email.dirty || formControls.email.touched)">
-				Are you sure  {{em.value}} Exists ?
-			  </div>
 
 			<div class="wrap-input1 validate-input" data-validate = "Mobile Number is required">
-				<input #mno formControlName="mobileNumber" class="input1" type="text" name="Mobile Number" placeholder="Mobile Number">
+				<input formControlName="mobileNumber" class="input1" type="text" name="Mobile Number" placeholder="Mobile Number">
 				<span class="shadow-input1"></span>
 			</div>
-
-			<div class="alert alert-danger" role="alert" *ngIf="formControls.mobileNumber.errors?.pattern && (formControls.mobileNumber.dirty || formControls.mobileNumber.touched)">
-				Hmm ! {{mno.value}} doesn't seems to be a valid Mobile Number :(
-			  </div>
 
 			<div class="wrap-input1 validate-input" data-validate = "City is required">
 				<input formControlName="city" class="input1" type="text" name="city" placeholder="Your City">

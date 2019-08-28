@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 export class ContactusComponent implements OnInit {
 
   emailSent: boolean;
-  mobileValidator = new RegExp("(?:(?:\\+|0{0,2})91(\\s*[\\- ]\\s*)?|[0 ]?)?[789]\\d{9}|(\\d[ -]?){10}\\d", "g");
 
   constructor(
     private service: ContactusService,
@@ -20,8 +19,8 @@ export class ContactusComponent implements OnInit {
 
   contactUsForm = new FormGroup({
     name : new FormControl('', [Validators.required]),
-    email : new FormControl('', [Validators.required,Validators.email]),
-    mobileNumber : new FormControl('', [Validators.required, Validators.pattern(this.mobileValidator)]),
+    email : new FormControl('', [Validators.required]),
+    mobileNumber : new FormControl('', [Validators.required]),
     city : new FormControl('', [Validators.required]),
     message : new FormControl('', [Validators.required]),
     recieveCopy : new FormControl(false)
@@ -46,10 +45,6 @@ export class ContactusComponent implements OnInit {
     this.emailSent = false;
     let nameField = document.querySelector('#name') as any; 
     nameField.focus();
-  }
-
-  get formControls() {
-    return this.contactUsForm.controls;
   }
 
 }
