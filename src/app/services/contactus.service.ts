@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-const URL='CLOUD_FUNCTION_URL';
+const URL='https://us-central1-email-angular-cloud-function.cloudfunctions.net/contactUs';
 @Injectable({
   providedIn: 'root'
 })
